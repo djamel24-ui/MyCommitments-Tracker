@@ -123,6 +123,23 @@
         const FileSpreadsheet = getIcon('FileSpreadsheet');
         const Calendar = getIcon('Calendar');
         const Circle = getIcon('Circle');
+        const Settings = getIcon('Settings');
+        const RefreshCw = getIcon('RefreshCw');
+        const LogOut = getIcon('LogOut');
+        const Filter = getIcon('Filter');
+        const CreditCard = getIcon('CreditCard');
+        
+        // New Icons for Month Dashboard
+        const Home = getIcon('Home');
+        const Car = getIcon('Car');
+        const Zap = getIcon('Zap');
+        const ShoppingBag = getIcon('ShoppingBag');
+        const Utensils = getIcon('Utensils');
+        const Smartphone = getIcon('Smartphone');
+        const Users = getIcon('Users');
+        const Train = getIcon('Train');
+        const Flame = getIcon('Flame');
+        const MoreHorizontal = getIcon('MoreHorizontal');
 
         // ----------------------------------------------------------------------
         // 1. TYPES & CONSTANTS
@@ -159,6 +176,9 @@
             refundMadam: number;
             rental: number;
             djamelsFamily: number;
+            
+            // Withdrawals
+            withdrawals: number;
 
             // Meta
             refundInfo: string;
@@ -209,19 +229,19 @@
             '2024-NOV': { monthlySalary: 2476, aeon: 250, abah: 400, refundAwien: 300, refundNoah: 242, savingTouchable: 25, gas: 550, parking: 50, topupMobile: 20, food: 25, shopee: 30, others: 315, noah: 200, refundInfo: 'RM42 PASTA...', remarks: 'Shopee item:(dec bill)...' },
             '2024-DEC': { monthlySalary: 2600, aeon: 250, abah: 600, refundAwien: 300, refundNoah: 150, savingTouchable: 25, gas: 550, parking: 50, topupMobile: 20, food: 30, shopee: 289, others: 225, refundInfo: 'RM100 MEALS...', remarks: 'Shopee item: (jan bill)...' },
             
-            // 2025 CORRECTED DATA
-            '2025-JAN': { monthlySalary: 1560, aeon: 250, abah: 600, nafkahGroceries: 200, tabungRaya: 25, myRapid: 50, gas: 20, topupMobile: 30, shopee: 262, cellColors: { tabungRaya: '#ef4444' }, remarks: 'Shopee item: (feb bill)...' },
-            '2025-FEB': { monthlySalary: 2080, aeon: 250, abah: 600, nafkahGroceries: 300, refundAwien: 200, refundNoah: 50, savingTouchable: 50, gas: 20, topupMobile: 30, shopee: 262, refundMadam: 100, rental: 100, remarks: 'Shopee item: (mac bill)...' },
-            '2025-MAR': { monthlySalary: 2600, aeon: 250, abah: 600, nafkahGroceries: 300, tabungRaya: 25, savingUnTouchable: 550, savingTouchable: 60, myRapid: 20, gas: 25, topupMobile: 30, shopee: 156, others: 150, refundMadam: 100, rental: 100, remarks: 'Shopee item: (apr bill)...' },
-            '2025-APR': { monthlySalary: 2600, aeon: 250, abah: 600, nafkahGroceries: 300, refundAwien: 405, tabungRaya: 25, savingUnTouchable: 200, savingTouchable: 50, myRapid: 20, gas: 25, topupMobile: 30, shopee: 172, others: 142, refundMadam: 100, rental: 100, refundInfo: 'REFUND AWIEN RM200...', remarks: 'Shopee item: (may bill)...' },
-            '2025-MAY': { monthlySalary: 3500, aeon: 250, abah: 600, refundMak: 75, utilities: 500, nafkahGroceries: 300, refundAwien: 500, refundNoah: 25, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, shopee: 160, others: 422, refundMadam: 100, rental: 100, refundInfo: 'REFUND NOAH RM200...', remarks: 'Shopee item: (jun bill)...' },
-            '2025-JUN': { monthlySalary: 3500, aeon: 250, abah: 600, refundMak: 75, utilities: 500, nafkahGroceries: 455, refundNoah: 25, savingUnTouchable: 500, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 230, shopee: 326, others: 142, refundMadam: 100, rental: 100, refundInfo: 'REFUND TRADE RM300...', remarks: 'Shopee item: (july bill)...' },
-            '2025-JUL': { monthlySalary: 3500, aeon: 250, abah: 700, refundMak: 200, utilities: 75, nafkahGroceries: 500, refundAwien: 150, refundNoah: 25, savingUnTouchable: 500, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 230, shopee: 343, others: 142, refundMadam: 100, rental: 100, remarks: 'Shopee item: (aug bill)...' },
-            '2025-AUG': { monthlySalary: 3500, aeon: 250, abah: 700, refundMak: 200, utilities: 75, nafkahGroceries: 500, refundNoah: 25, savingUnTouchable: 700, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 230, shopee: 397, refundMadam: 100, djamelsFamily: 57, remarks: 'Shopee item: (sept bill)...' },
-            '2025-SEP': { monthlySalary: 3500, aeon: 250, abah: 700, refundMak: 200, utilities: 75, nafkahGroceries: 500, refundNoah: 25, savingUnTouchable: 800, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 230, shopee: 202, refundMadam: 100, rental: 100, remarks: 'Shopee item:...' },
-            '2025-OCT': { monthlySalary: 3500, aeon: 250, abah: 700, utilities: 75, nafkahGroceries: 500, refundAwien: 153, refundNoah: 25, savingUnTouchable: 500, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 230, shopee: 161, refundMadam: 100, rental: 100, refundInfo: 'HOTEL RM153', remarks: 'Shopee item:...' },
-            '2025-NOV': { monthlySalary: 3500, aeon: 250, abah: 100, refundMak: 200, utilities: 100, nafkahGroceries: 500, refundAwien: 153, refundNoah: 25, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 189, shopee: 120, others: 100, noah: 300, refundMadam: 1150, refundInfo: 'HOTEL RM153', remarks: 'Shopee item:...' },
-            '2025-DEC': { monthlySalary: 3500, aeon: 250, abah: 100, refundMak: 150, utilities: 100, nafkahGroceries: 500, refundAwien: 153, refundNoah: 25, savingTouchable: 50, gas: 20, parking: 25, topupMobile: 30, food: 158, others: 100, noah: 300, refundMadam: 1150, refundInfo: 'HOTEL RM153', remarks: 'Shopee item:...' },
+            // 2025 DATA (Based on User JSON)
+            '2025-JAN': { monthlySalary: 1560.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 0.0, nafkahGroceries: 200.0, refundAwien: 0.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 0.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 0.0, topupMobile: 30.0, food: 0.0, shopee: 262.0, others: 0.0, noah: 0.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 0.0, cellColors: { tabungRaya: '#ef4444' } },
+            '2025-FEB': { monthlySalary: 2080.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 0.0, nafkahGroceries: 300.0, refundAwien: 200.0, refundNoah: 0.0, tabungRaya: 50.0, savingUnTouchable: 0.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 0.0, topupMobile: 30.0, food: 0.0, shopee: 262.0, others: 0.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-MAR': { monthlySalary: 2600.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 0.0, nafkahGroceries: 300.0, refundAwien: 0.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 550.0, savingTouchable: 0.0, myRapid: 60.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 0.0, shopee: 156.0, others: 150.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-APR': { monthlySalary: 2600.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 0.0, nafkahGroceries: 300.0, refundAwien: 405.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 200.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 0.0, shopee: 172.0, others: 142.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-MAY': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 300.0, refundNoah: 500.0, tabungRaya: 25.0, savingUnTouchable: 0.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 0.0, shopee: 160.0, others: 422.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-JUN': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 600.0, refundMak: 0.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 455.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 500.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 230.0, shopee: 326.0, others: 142.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-JUL': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 700.0, refundMak: 200.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 150.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 500.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 230.0, shopee: 343.0, others: 142.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-AUG': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 700.0, refundMak: 200.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 0.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 700.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 230.0, shopee: 397.0, others: 0.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 57.0 },
+            '2025-SEP': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 700.0, refundMak: 200.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 0.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 800.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 230.0, shopee: 202.0, others: 0.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0 },
+            '2025-OCT': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 700.0, refundMak: 0.0, utilities: 75.0, nafkahGroceries: 500.0, refundAwien: 153.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 500.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 230.0, shopee: 161.0, others: 0.0, noah: 100.0, refundMadam: 0.0, rental: 0.0, djamelsFamily: 100.0, refundInfo: 'HOTEL RM153' },
+            '2025-NOV': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 100.0, refundMak: 200.0, utilities: 100.0, nafkahGroceries: 500.0, refundAwien: 153.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 0.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 0.0, shopee: 189.0, others: 120.0, noah: 100.0, refundMadam: 300.0, rental: 1150.0, djamelsFamily: 0.0, refundInfo: 'HOTEL RM153' },
+            '2025-DEC': { monthlySalary: 3500.0, extraIncome: 0.0, aeon: 250.0, abah: 100.0, refundMak: 150.0, utilities: 100.0, nafkahGroceries: 500.0, refundAwien: 153.0, refundNoah: 0.0, tabungRaya: 25.0, savingUnTouchable: 0.0, savingTouchable: 0.0, myRapid: 50.0, gas: 20.0, parking: 25.0, topupMobile: 30.0, food: 0.0, shopee: 158.0, others: 0.0, noah: 100.0, refundMadam: 300.0, rental: 1150.0, djamelsFamily: 0.0, refundInfo: 'HOTEL RM153' },
         };
 
         const generateInitialRecords = () => {
@@ -260,6 +280,7 @@
                         refundMadam: 0,
                         rental: 0,
                         djamelsFamily: 0,
+                        withdrawals: 0,
                         refundInfo: '',
                         remarks: '',
                         isPaid: false,
@@ -313,7 +334,7 @@
         };
 
         const calculateBalance = (record) => {
-            return calculateTotalIncome(record) - calculateTotalCommitments(record);
+            return calculateTotalIncome(record) - calculateTotalCommitments(record) - (Number(record.withdrawals) || 0);
         };
 
         const formatCurrency = (amount) => {
@@ -333,7 +354,8 @@
             records.forEach(record => {
                 const inc = calculateTotalIncome(record);
                 const comm = calculateTotalCommitments(record);
-                const bal = inc - comm;
+                const wdr = (Number(record.withdrawals) || 0);
+                const bal = inc - comm - wdr;
 
                 totalIncome += inc;
                 totalCommitments += comm;
@@ -348,6 +370,158 @@
         // ----------------------------------------------------------------------
         // 3. COMPONENTS
         // ----------------------------------------------------------------------
+
+        // --- GoogleSheetsSync ---
+        const GoogleSheetsSync = ({ records }) => {
+            const [isSyncing, setIsSyncing] = useState(false);
+            const [lastSyncTime, setLastSyncTime] = useState(null);
+            const [config, setConfig] = useState({
+                clientId: localStorage.getItem('g_client_id') || '',
+                apiKey: localStorage.getItem('g_api_key') || '',
+                spreadsheetId: '18A11W6ZZ3jZrThhxLLvWklCjNwGGTsBFKf4bibXNaCw',
+            });
+            const [showConfig, setShowConfig] = useState(false);
+
+            const handleConfigChange = (e) => {
+                const { name, value } = e.target;
+                setConfig(prev => ({ ...prev, [name]: value }));
+                if (name === 'clientId') localStorage.setItem('g_client_id', value);
+                if (name === 'apiKey') localStorage.setItem('g_api_key', value);
+            };
+
+            const initClient = () => {
+                return new Promise((resolve, reject) => {
+                    if (!window.gapi) {
+                        reject('Google API script not loaded');
+                        return;
+                    }
+                    window.gapi.load('client:auth2', () => {
+                        window.gapi.client.init({
+                            apiKey: config.apiKey,
+                            clientId: config.clientId,
+                            discoveryDocs: ["https://sheets.googleapis.com/$discovery/rest?version=v4"],
+                            scope: "https://www.googleapis.com/auth/spreadsheets",
+                        }).then(resolve).catch(reject);
+                    });
+                });
+            };
+
+            const handleSync = async () => {
+                if (!config.clientId || !config.apiKey) {
+                    setShowConfig(true);
+                    return;
+                }
+
+                setIsSyncing(true);
+                try {
+                    // Load GAPI script if needed
+                    if (!window.gapi) {
+                        await new Promise((resolve) => {
+                            const script = document.createElement('script');
+                            script.src = "https://apis.google.com/js/api.js";
+                            script.onload = resolve;
+                            document.body.appendChild(script);
+                        });
+                    }
+
+                    await initClient();
+
+                    const authInstance = window.gapi.auth2.getAuthInstance();
+                    if (!authInstance.isSignedIn.get()) {
+                        await authInstance.signIn();
+                    }
+
+                    // Prepare data for sheet
+                    const headers = [
+                        "ID", "Year", "Month", "Income", "Extra", "Total Income",
+                        ...COMMITMENT_FIELDS.map(f => f.label),
+                        "Total Commitments", "Withdrawals", "Balance", "Remarks", "Paid"
+                    ];
+
+                    const rows = records.map(r => {
+                        const inc = calculateTotalIncome(r);
+                        const comm = calculateTotalCommitments(r);
+                        const bal = calculateBalance(r);
+                        return [
+                            r.id, r.year, r.month, r.monthlySalary, r.extraIncome, inc,
+                            ...COMMITMENT_FIELDS.map(f => r[f.key] || 0),
+                            comm, r.withdrawals || 0, bal, r.remarks, r.isPaid ? "YES" : "NO"
+                        ];
+                    });
+
+                    const values = [headers, ...rows];
+                    
+                    // Clear sheet first
+                    await window.gapi.client.sheets.spreadsheets.values.clear({
+                        spreadsheetId: config.spreadsheetId,
+                        range: 'Sheet1!A1:Z1000',
+                    });
+
+                    // Write data
+                    await window.gapi.client.sheets.spreadsheets.values.update({
+                        spreadsheetId: config.spreadsheetId,
+                        range: 'Sheet1!A1',
+                        valueInputOption: 'USER_ENTERED',
+                        resource: { values }
+                    });
+
+                    setLastSyncTime(new Date());
+                    alert('Sync Successful!');
+                } catch (error) {
+                    console.error("Sync Error:", error);
+                    alert('Sync Failed: ' + (error.message || JSON.stringify(error)));
+                } finally {
+                    setIsSyncing(false);
+                }
+            };
+
+            return (
+                <>
+                    <button onClick={() => setShowConfig(true)} className="p-1.5 text-slate-500 hover:bg-slate-100 rounded-md transition-colors" title="Settings">
+                        <Settings size={18} />
+                    </button>
+                    <button onClick={handleSync} disabled={isSyncing} className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-medium transition-all ${isSyncing ? 'bg-slate-100 text-slate-400' : 'bg-green-50 text-green-700 hover:bg-green-100'}`}>
+                        <RefreshCw size={14} className={isSyncing ? "animate-spin" : ""} />
+                        {isSyncing ? 'Syncing...' : 'Sync Sheets'}
+                    </button>
+
+                    {showConfig && (
+                        <div className="fixed inset-0 z-[100] flex items-center justify-center bg-black/50 backdrop-blur-sm p-4">
+                            <div className="bg-white rounded-xl shadow-xl w-full max-w-md p-6 animate-in fade-in zoom-in">
+                                <div className="flex justify-between items-center mb-4">
+                                    <h3 className="text-lg font-bold text-slate-800">Sync Settings</h3>
+                                    <button onClick={() => setShowConfig(false)}><X size={20} className="text-slate-400 hover:text-slate-600" /></button>
+                                </div>
+                                <div className="space-y-4">
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-500 mb-1">Google Client ID</label>
+                                        <input type="text" name="clientId" value={config.clientId} onChange={handleConfigChange} className="w-full border border-slate-300 rounded p-2 text-sm" placeholder="Paste Client ID" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-500 mb-1">Google API Key</label>
+                                        <input type="text" name="apiKey" value={config.apiKey} onChange={handleConfigChange} className="w-full border border-slate-300 rounded p-2 text-sm" placeholder="Paste API Key" />
+                                    </div>
+                                    <div>
+                                        <label className="block text-xs font-bold text-slate-500 mb-1">Spreadsheet ID</label>
+                                        <input type="text" name="spreadsheetId" value={config.spreadsheetId} onChange={handleConfigChange} className="w-full border border-slate-300 rounded p-2 text-sm" readOnly />
+                                    </div>
+                                    <div className="bg-blue-50 p-3 rounded text-xs text-blue-700">
+                                        <p className="font-bold mb-1">How to get these?</p>
+                                        <ol className="list-decimal pl-4 space-y-1">
+                                            <li>Go to Google Cloud Console.</li>
+                                            <li>Create a project & enable "Google Sheets API".</li>
+                                            <li>Create "OAuth Client ID" (add localhost/domain to origins).</li>
+                                            <li>Create "API Key".</li>
+                                        </ol>
+                                    </div>
+                                    <button onClick={handleSync} className="w-full bg-blue-600 text-white py-2 rounded font-bold hover:bg-blue-700">Save & Sync Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    )}
+                </>
+            );
+        };
 
         // --- SummaryCards ---
         const SummaryCards = ({
@@ -413,6 +587,8 @@
             if (!isOpen || !record) return null;
 
             const totalCommitments = calculateTotalCommitments(record);
+            const totalIncome = calculateTotalIncome(record);
+            const currentBalance = calculateBalance(record);
 
             const handleAmountChange = (fieldKey, value) => {
                 const numValue = parseFloat(value) || 0;
@@ -440,6 +616,36 @@
                 return 'bg-white border-slate-200';
             };
 
+            const getCommitmentIcon = (key) => {
+                switch (key) {
+                    case 'aeon': return <CreditCard size={20} className="text-indigo-500" />;
+                    case 'abah':
+                    case 'refundMak':
+                    case 'refundAwien':
+                    case 'refundNoah':
+                    case 'refundMadam':
+                    case 'noah':
+                    case 'djamelsFamily':
+                        return <Users size={20} className="text-rose-500" />;
+                    case 'utilities': return <Zap size={20} className="text-amber-500" />;
+                    case 'nafkahGroceries':
+                    case 'food':
+                        return <Utensils size={20} className="text-orange-500" />;
+                    case 'tabungRaya':
+                    case 'savingUnTouchable':
+                    case 'savingTouchable':
+                        return <PiggyBank size={20} className="text-emerald-500" />;
+                    case 'myRapid':
+                    case 'parking':
+                         return <Train size={20} className="text-blue-500" />;
+                    case 'gas': return <Flame size={20} className="text-red-500" />;
+                    case 'topupMobile': return <Smartphone size={20} className="text-sky-500" />;
+                    case 'shopee': return <ShoppingBag size={20} className="text-orange-600" />;
+                    case 'rental': return <Home size={20} className="text-teal-600" />;
+                    default: return <MoreHorizontal size={20} className="text-slate-400" />;
+                }
+            };
+
             return (
                 <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/60 backdrop-blur-sm p-4 animate-in fade-in duration-200">
                     <div className="bg-slate-50 rounded-2xl shadow-2xl w-full max-w-5xl max-h-[90vh] flex flex-col overflow-hidden">
@@ -449,13 +655,31 @@
                                     <span className="text-blue-600">{record.month}</span>
                                     <span className="text-slate-400">{record.year}</span>
                                 </h2>
-                                <p className="text-slate-500 text-sm font-medium mt-1">
-                                    Total Commitments: <span className="text-slate-800 font-bold">{formatCurrency(totalCommitments)}</span>
-                                </p>
+                                <div className="flex gap-4 mt-1">
+                                    <p className="text-slate-500 text-sm font-medium">
+                                        Commitments: <span className="text-red-600 font-bold">{formatCurrency(totalCommitments)}</span>
+                                    </p>
+                                    <p className="text-slate-500 text-sm font-medium">
+                                        Balance: <span className="text-green-600 font-bold">{formatCurrency(currentBalance)}</span>
+                                    </p>
+                                </div>
                             </div>
                             <button onClick={onClose} className="p-2 bg-slate-100 hover:bg-slate-200 rounded-full text-slate-500 transition-colors">
                                 <X size={24} />
                             </button>
+                        </div>
+
+                        <div className="bg-slate-50 px-6 py-3 border-b border-slate-200 flex items-center gap-4">
+                             <div className="flex items-center gap-2 bg-white px-3 py-2 rounded-lg border border-slate-200 shadow-sm">
+                                <span className="text-xs font-bold text-slate-500 uppercase">Withdrawals / Spent</span>
+                                <input
+                                    type="number"
+                                    value={record.withdrawals || ''}
+                                    onChange={(e) => handleAmountChange('withdrawals', e.target.value)}
+                                    className="w-32 bg-transparent text-right font-bold text-red-600 outline-none border-b border-slate-300 focus:border-red-500"
+                                    placeholder="0.00"
+                                />
+                             </div>
                         </div>
 
                         <div className="flex-1 overflow-y-auto p-4 sm:p-6 custom-scrollbar">
@@ -466,13 +690,18 @@
 
                                     return (
                                         <div key={field.key} className={`relative flex flex-col p-4 rounded-xl border-2 shadow-sm transition-all duration-200 hover:shadow-md ${getCardColor(field.key)}`}>
-                                            <div className="flex justify-between items-start mb-2">
-                                                <span className="text-xs font-bold text-slate-500 uppercase tracking-tight truncate w-full" title={field.label}>
-                                                    {field.label}
-                                                </span>
+                                            <div className="flex justify-between items-start mb-3">
+                                                 <div className="flex items-center gap-2 overflow-hidden">
+                                                    <div className="p-1.5 bg-slate-50 rounded-lg border border-slate-100">
+                                                        {getCommitmentIcon(field.key)}
+                                                    </div>
+                                                    <span className="text-xs font-bold text-slate-500 uppercase tracking-tight truncate" title={field.label}>
+                                                        {field.label}
+                                                    </span>
+                                                </div>
                                             </div>
 
-                                            <div className="relative mb-4 group">
+                                            <div className="relative mb-4 group mt-auto">
                                                 <span className="absolute left-0 top-1/2 -translate-y-1/2 text-slate-400 font-medium text-sm">RM</span>
                                                 <input
                                                     type="number"
@@ -483,7 +712,7 @@
                                                 />
                                             </div>
 
-                                            <div className="mt-auto grid grid-cols-4 gap-1 pt-3 border-t border-black/5">
+                                            <div className="grid grid-cols-4 gap-1 pt-3 border-t border-black/5">
                                                 <button onClick={() => handleStatusChange(field.key, '#86efac')} className={`flex justify-center items-center p-1.5 rounded-lg transition-colors ${currentColor === '#86efac' ? 'bg-green-500 text-white shadow-inner' : 'hover:bg-green-100 text-green-600'}`} title="Mark Paid">
                                                     <CheckCircle size={18} />
                                                 </button>
@@ -538,6 +767,7 @@
             refundMadam: 0,
             rental: 1150,
             djamelsFamily: 100,
+            withdrawals: 0,
             refundInfo: '',
             remarks: '',
             isPaid: false
@@ -663,11 +893,17 @@
 
         const FinancialTable = ({ records, onUpdateRecord, onDelete, onMonthClick }) => {
             const [contextMenu, setContextMenu] = useState(null);
+            const [selectedYear, setSelectedYear] = useState(new Date().getFullYear());
 
-            const sortedRecords = [...records].sort((a, b) => {
-                if (a.year !== b.year) return a.year - b.year;
-                return MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month);
-            });
+            // Available years from records + buffer
+            const availableYears = Array.from(new Set(records.map(r => r.year))).sort((a, b) => a - b);
+            if (!availableYears.includes(new Date().getFullYear())) availableYears.push(new Date().getFullYear());
+
+            const sortedRecords = [...records]
+                .filter(r => r.year === selectedYear) // Filter by selected year
+                .sort((a, b) => {
+                    return MONTHS.indexOf(a.month) - MONTHS.indexOf(b.month);
+                });
 
             useEffect(() => {
                 const handleClick = () => setContextMenu(null);
@@ -707,6 +943,20 @@
 
             return (
                 <div className="flex flex-col h-full bg-white shadow-sm border border-slate-300 overflow-hidden text-xs select-none">
+                    
+                    {/* Year Selector Tabs */}
+                    <div className="flex border-b border-slate-300 bg-slate-50 overflow-x-auto">
+                        {availableYears.map(year => (
+                            <button
+                                key={year}
+                                onClick={() => setSelectedYear(year)}
+                                className={`px-6 py-2 font-bold text-sm transition-colors ${selectedYear === year ? 'bg-white text-blue-600 border-r border-l border-t-2 border-t-blue-600 border-slate-300' : 'text-slate-500 hover:bg-slate-100 hover:text-slate-700'}`}
+                            >
+                                {year}
+                            </button>
+                        ))}
+                    </div>
+
                     <div className="flex-1 overflow-auto custom-scrollbar relative">
                         <table className="min-w-max border-collapse border-spacing-0 table-fixed">
                             <colgroup>
@@ -717,6 +967,7 @@
                                 <col className="w-[80px]" />
                                 {COMMITMENT_FIELDS.map(field => <col key={field.key} className="w-[90px]" />)}
                                 <col className="w-[80px]" />
+                                <col className="w-[90px]" /> {/* Withdrawal Col */}
                                 <col className="w-[80px]" />
                                 <col className="w-[150px]" />
                                 <col className="w-[200px]" />
@@ -735,6 +986,7 @@
                                         <th key={field.key} className="border border-slate-300 p-1 bg-red-50 truncate px-1 text-center text-red-800" title={field.label}>{field.label}</th>
                                     ))}
                                     <th className="border border-slate-300 p-1 bg-red-100 font-bold text-center text-red-900">TOTAL</th>
+                                    <th className="border border-slate-300 p-1 bg-orange-50 text-center text-orange-800">W/DRAW</th>
                                     <th className="border border-slate-300 p-1 bg-blue-100 font-bold text-center text-blue-900">BALANCE</th>
                                     <th className="border border-slate-300 p-1 text-center text-slate-600">REFUND INFO</th>
                                     <th className="border border-slate-300 p-1 text-center text-slate-600">REMARKS</th>
@@ -773,6 +1025,9 @@
                                                 </td>
                                             ))}
                                             <td className="border border-slate-300 p-1 text-right font-bold text-red-700 bg-red-50 select-text">{totalCommitment.toFixed(0)}</td>
+                                            <td className="border border-slate-300 p-0" onContextMenu={(e) => handleContextMenu(e, record.id, 'withdrawals')}>
+                                                 <input type="number" className="w-full h-full px-1 py-1 text-right bg-transparent outline-none focus:bg-blue-50 text-red-500" value={record.withdrawals || ''} onChange={(e) => handleCellChange(record.id, 'withdrawals', e.target.value)} />
+                                            </td>
                                             <td className={`border border-slate-300 p-1 text-right font-bold select-text ${balance < 0 ? 'text-red-600' : 'text-blue-600'} bg-blue-50`}>{balance.toFixed(0)}</td>
                                             <td className="border border-slate-300 p-0" style={{ backgroundColor: record.cellColors?.['refundInfo'] }} onContextMenu={(e) => handleContextMenu(e, record.id, 'refundInfo')}>
                                                 <input type="text" className="w-full h-full px-1 py-1 bg-transparent outline-none focus:bg-blue-50 text-[10px]" value={record.refundInfo} onChange={(e) => handleCellChange(record.id, 'refundInfo', e.target.value)} />
@@ -791,13 +1046,18 @@
                                         </tr>
                                     );
                                 })}
+                                {sortedRecords.length === 0 && (
+                                    <tr>
+                                        <td colSpan={35} className="p-8 text-center text-slate-400">No records for {selectedYear}.</td>
+                                    </tr>
+                                )}
                             </tbody>
                         </table>
                     </div>
                     
                     <div className="p-2 bg-slate-50 border-t border-slate-300 text-xs text-slate-500 flex justify-between items-center">
                         <span>Right-click cell to set Status, or click <span className="text-blue-600 font-bold">Month Name</span> for Dashboard.</span>
-                        <span>Records: {records.length}</span>
+                        <span>Records: {sortedRecords.length}</span>
                     </div>
 
                     {contextMenu && (
@@ -894,6 +1154,7 @@
             const [editingRecord, setEditingRecord] = useState(null);
             const [viewMode, setViewMode] = useState('table');
             const [selectedMonthRecord, setSelectedMonthRecord] = useState(null);
+            const [isAutoSaved, setIsAutoSaved] = useState(false);
 
             useEffect(() => {
                 const savedData = localStorage.getItem('financial_records_v5');
@@ -916,6 +1177,9 @@
             useEffect(() => {
                 if (records.length > 0) {
                     localStorage.setItem('financial_records_v5', JSON.stringify(records));
+                    setIsAutoSaved(true);
+                    const timer = setTimeout(() => setIsAutoSaved(false), 2000);
+                    return () => clearTimeout(timer);
                 }
             }, [records]);
 
@@ -976,6 +1240,7 @@
                             <div className="flex items-center gap-3">
                                 <div className="bg-green-600 p-1.5 rounded-lg"><FileSpreadsheet className="text-white" size={20} /></div>
                                 <h1 className="text-lg font-bold text-slate-800 tracking-tight hidden sm:block">MyCommitments</h1>
+                                {isAutoSaved && <span className="text-xs font-medium text-green-600 bg-green-50 px-2 py-0.5 rounded-full animate-in fade-in">Auto-saved</span>}
                             </div>
                             <div className="hidden md:flex items-center gap-2 bg-slate-100 px-3 py-1.5 rounded-lg border border-slate-200">
                                 <Calendar size={14} className="text-slate-500" />
@@ -991,6 +1256,7 @@
                                     <button onClick={() => setViewMode('analytics')} className={`px-3 py-1 rounded-md text-sm font-medium transition-all ${viewMode === 'analytics' ? 'bg-white text-slate-800 shadow-sm' : 'text-slate-500 hover:text-slate-700'}`}><span className="flex items-center gap-2"><PieChartIcon size={14} /> Analytics</span></button>
                                 </div>
                                 <div className="w-px h-6 bg-slate-200 mx-1"></div>
+                                <GoogleSheetsSync records={records} />
                                 <button onClick={handleExportData} className="p-1.5 text-slate-500 hover:bg-slate-100 rounded-md transition-colors" title="Export JSON"><Download size={18} /></button>
                                 <button onClick={handleAddRecord} className="bg-blue-600 hover:bg-blue-700 text-white p-1.5 rounded-md transition-colors shadow-sm" title="Add Record"><Plus size={18} /></button>
                             </div>
